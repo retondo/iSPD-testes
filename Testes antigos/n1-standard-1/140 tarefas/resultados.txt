@@ -1,0 +1,1 @@
+Média de tempo de execução: 85,50s

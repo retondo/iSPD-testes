@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE system SYSTEM "iSPD.dtd">
+<system version="2.2">
+    <owner id="user1"/>
+    <machine id="mac4" load="0.0" owner="user1" power="45938.0">
+        <position x="575" y="278"/>
+        <icon_id global="4" local="4"/>
+        <characteristic>
+            <process number="2" power="45938.0"/>
+            <memory size="4000.0"/>
+            <hard_disk size="10.0"/>
+            <cost cost_disk="0.0" cost_mem="0.0" cost_proc="0.0"/>
+        </characteristic>
+    </machine>
+    <machine id="mac1" load="0.0" owner="user1" power="45938.0">
+        <position x="350" y="277"/>
+        <icon_id global="1" local="1"/>
+        <characteristic>
+            <process number="2" power="45938.0"/>
+            <memory size="4000.0"/>
+            <hard_disk size="10.0"/>
+            <cost cost_disk="0.0" cost_mem="0.0" cost_proc="0.0"/>
+        </characteristic>
+    </machine>
+    <machine id="mac3" load="0.0" owner="user1" power="45938.0">
+        <position x="499" y="276"/>
+        <icon_id global="3" local="3"/>
+        <characteristic>
+            <process number="2" power="45938.0"/>
+            <memory size="4000.0"/>
+            <hard_disk size="10.0"/>
+            <cost cost_disk="0.0" cost_mem="0.0" cost_proc="0.0"/>
+        </characteristic>
+    </machine>
+    <machine id="mac2" load="0.0" owner="user1" power="45938.0">
+        <position x="426" y="278"/>
+        <icon_id global="2" local="2"/>
+        <characteristic>
+            <process number="2" power="45938.0"/>
+            <memory size="4000.0"/>
+            <hard_disk size="10.0"/>
+            <cost cost_disk="0.0" cost_mem="0.0" cost_proc="0.0"/>
+        </characteristic>
+    </machine>
+    <machine id="mac0" load="0.0" owner="user1" power="45938.0">
+        <master scheduler="RoundRobin" vm_alloc="FirstFit">
+            <slave id="2"/>
+            <slave id="4"/>
+            <slave id="1"/>
+            <slave id="3"/>
+        </master>
+        <position x="463" y="130"/>
+        <icon_id global="0" local="0"/>
+        <characteristic>
+            <process number="2" power="45938.0"/>
+            <memory size="4000.0"/>
+            <hard_disk size="10.0"/>
+            <cost cost_disk="0.0" cost_mem="0.0" cost_proc="0.0"/>
+        </characteristic>
+    </machine>
+    <link bandwidth="366.0" id="link11" latency="0.00136" load="0.0">
+        <connect destination="4" origination="0"/>
+        <position x="463" y="130"/>
+        <position x="575" y="278"/>
+        <icon_id global="11" local="6"/>
+    </link>
+    <link bandwidth="366.0" id="link7" latency="0.00136" load="0.0">
+        <connect destination="0" origination="2"/>
+        <position x="426" y="278"/>
+        <position x="463" y="130"/>
+        <icon_id global="7" local="2"/>
+    </link>
+    <link bandwidth="366.0" id="link12" latency="0.00136" load="0.0">
+        <connect destination="0" origination="4"/>
+        <position x="575" y="278"/>
+        <position x="463" y="130"/>
+        <icon_id global="12" local="7"/>
+    </link>
+    <link bandwidth="366.0" id="link8" latency="0.00136" load="0.0">
+        <connect destination="2" origination="0"/>
+        <position x="463" y="130"/>
+        <position x="426" y="278"/>
+        <icon_id global="8" local="3"/>
+    </link>
+    <link bandwidth="366.0" id="link5" latency="0.00136" load="0.0">
+        <connect destination="0" origination="1"/>
+        <position x="350" y="277"/>
+        <position x="463" y="130"/>
+        <icon_id global="5" local="0"/>
+    </link>
+    <link bandwidth="366.0" id="link10" latency="0.00136" load="0.0">
+        <connect destination="0" origination="3"/>
+        <position x="499" y="276"/>
+        <position x="463" y="130"/>
+        <icon_id global="10" local="5"/>
+    </link>
+    <link bandwidth="366.0" id="link6" latency="0.00136" load="0.0">
+        <connect destination="1" origination="0"/>
+        <position x="463" y="130"/>
+        <position x="350" y="277"/>
+        <icon_id global="6" local="1"/>
+    </link>
+    <link bandwidth="366.0" id="link9" latency="0.00136" load="0.0">
+        <connect destination="3" origination="0"/>
+        <position x="463" y="130"/>
+        <position x="499" y="276"/>
+        <icon_id global="9" local="4"/>
+    </link>
+    <virtualMac disk_alloc="10.0" id="VM1" mem_alloc="3750.0" op_system="Linux" owner="user1" power="1" vmm="mac0"/>
+    <virtualMac disk_alloc="10.0" id="VM3" mem_alloc="3750.0" op_system="Linux" owner="user1" power="1" vmm="mac0"/>
+    <virtualMac disk_alloc="10.0" id="VM2" mem_alloc="3750.0" op_system="Linux" owner="user1" power="1" vmm="mac0"/>
+    <virtualMac disk_alloc="10.0" id="VM0" mem_alloc="3750.0" op_system="Linux" owner="user1" power="1" vmm="mac0"/>
+    <load>
+        <node application="app0" id_master="mac0" owner="user1" tasks="200">
+            <size maximum="111104.0" minimum="111104.0" type="computing"/>
+            <size maximum="0.0" minimum="0.0" type="communication"/>
+        </node>
+    </load>
+</system>
